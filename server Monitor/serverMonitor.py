@@ -37,7 +37,8 @@ if __name__ == '__main__':
     client.on_message = on_message
 
     try:
-        client.connect("198.100.30.116", 1883, 60)
+        #client.connect("198.100.30.116", 1883, 60)
+        client.connect("localhost", 1883, 60)
         client.loop_forever()
     except Exception as e:
         client.disconnect()
